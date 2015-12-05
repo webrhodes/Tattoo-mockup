@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tattoo Mock-Up | Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+    <link rel="stylesheet" type="text/css" href="customstyle.css">
+</head>
+<body data-spy="scroll" data-target="#my-navbar">
+
+
+<!-- Navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button><!--end toggle btn -->
+
+				<a href="index.html" class="navbar-brand">Tattoo Mock-Up</a>
+			</div><!-- end navbar header -->
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+
+				<div class="col-sm-3 col-md-3 pull-right">
+					<form class="navbar-form" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+							</div>
+						</div>
+					</form>
+				</div><!-- end search navbar -->
+
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artists <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="artists.html">Artist 1</a></li>
+							<li><a href="artists-1.html">Artist 2</a></li>
+							<li><a href="artists-2.html">Artist 3</a></li>
+							<li><a href="artists-3.html">Artist 4</a></li>
+							<li><a href="artists-4.html">Artist 5</a></li>
+							<li role="separator" class="divider"></li>
+            				<li><a href="#">Gallery</a></li>
+						</ul><!-- end dropdown -->
+					
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#after-care">After Care</a></li>
+					<li><a href="#career-op">Career Opportunities</a></li>
+					<li><a href="#apparel">Apparel</a></li>
+					
+				</ul>
+
+			</div><!-- end collapse navbar -->
+		</div><!--end container -->
+	</nav><!-- End Navbar -->
+
+<!--Logo -->
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Tattoo Logo Goes Here!</h1>
+			<p>Any additional text needed here</p>
+		</div>
+	</div><!-- End Logo -->
+
+<!-- Meet the Artist -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<img class="img-responsive"src="http://placehold.it/700x400">
+			</div>
+			<div class="col-lg-4 muted center-block">
+				<h2 class="text-center">Amy Artist</h2>
+				<h3 class="">Position: <div class="text-muted">Shop Badass</div></br>
+					Influences: <div class="text-muted">Joe Ink, Sam Sailor, Sailor Moon, Happy Gilmore</div></h3>
+				<p>Listen. Strange women lying in ponds distributing swords is no basis for a system of government. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony. Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot! Be quiet! The nose? Bloody Peasant! Well, how'd you become king, then?</p>
+			</div>
+
+			<div class="col-lg-4 pull-right-8">
+				<h3>Follow Me</h3>
+				<ul class="list-inline">
+					<li><a href="">Facebook</a></li>
+					<li><a href="">Twitter</a></li>
+				    <li><a href="">YouTube</a></li>
+				</ul>
+			</div><!-- end social media -->
+		</div><!-- end row -->
+		<hr>
+	</div><!-- End Meet the Artist -->
+
+<!-- Gallery -->
+	<!-- BlueImp Gallery -->
+	<div class="container text-center">
+		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+			<div class="slides"></div>
+			<h3 class="title"></h3>
+			<a class="prev">‹</a>
+			<a class="next">›</a>
+			<a class="close">×</a>
+			<a class="play-pause"></a>
+			<ol class="indicator"></ol>
+		</div>
+
+		<div id="links" >
+			<a href="images/banana.jpg" title="Banana">
+				<img src="images/thumbnails/tn_banana.jpg" alt="Banana">
+			</a>
+			<a href="images/apple.jpg" title="Apple">
+				<img src="images/thumbnails/tn_apple.jpg" alt="Apple">
+			</a>
+			<a href="images/orange.jpg" title="Orange">
+				<img src="images/thumbnails/tn_orange.jpg" alt="Orange">
+			</a>
+			<a href="images/grapes.jpg" title="Grapes">
+				<img src="images/thumbnails/tn_grapes.jpg" alt="Grapes">
+			</a>
+			<a href="images/pear.jpg" title="Pear">
+				<img src="images/thumbnails/tn_pear.jpg" alt="Pear">
+			</a>
+		</div>
+	</div>
+	<!-- BlueImp .js -->
+	<script>
+	document.getElementById('links').onclick = function (event) {
+		event = event || window.event;
+		var target = event.target || event.srcElement,
+		link = target.src ? target.parentNode : target,
+		options = {index: link, event: event},
+		links = this.getElementsByTagName('a');
+		blueimp.Gallery(links, options);
+	};
+	</script>
+
+<!-- Footer -->
+	<footer>
+		<div class="well">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6">
+						<h3>Follow us!!</h3>
+						<ul>
+							<li><a href="">Facebook</a></li>
+							<li><a href="">Twitter</a></li>
+				            <li><a href="">YouTube</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6">
+						<h3>Located</h3>
+						<address>
+							<strong>Stout's House of Pain</strong></br>
+							123 Hwy 17</br>
+							Jacksonville, NC 28546</br>
+							Phone: 910-555-5555
+						</address>
+					</div>
+					<hr>
+				</div>
+				<p class="text-center">&copy;Copyright @ 2015</p>
+            <hr>
+            <p class="text-center">Site Designed by <a href="">Dawn Gamble</a></p>
+			</div><!-- end container -->
+		</div>
+	</footer><!-- End Footer -->
+
+
+<!-- Latest JQuery 2.1.4 -->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<!-- Latest compiled and minified JavaScript -->   
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- BluImp Gallery JavaScript -->
+<script src="js/blueimp-gallery.min.js"></script>
+</body>
+</html>
